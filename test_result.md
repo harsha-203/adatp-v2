@@ -102,6 +102,115 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
+user_problem_statement: "Fix course enrollment network error in repository from https://github.com/harsha-203/adatp-v2.git"
+
+backend:
+  - task: "Supabase Configuration"
+    implemented: true
+    working: true
+    file: "/app/backend/.env"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Configured SUPABASE_URL, SUPABASE_SERVICE_KEY, and EMERGENT_LLM_KEY in backend/.env. Backend successfully connects to Supabase. Health check confirms supabase_connected: true"
+  
+  - task: "Course Enrollment Endpoint"
+    implemented: true
+    working: "pending_test"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "pending_test"
+        agent: "main"
+        comment: "Enrollment endpoint POST /api/courses/{course_id}/enroll exists at line 878. Accepts user_id query parameter. Backend dependencies installed and server running. Ready for comprehensive testing."
+
+frontend:
+  - task: "Frontend Supabase Configuration"
+    implemented: true
+    working: true
+    file: "/app/frontend/.env"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Configured NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, and NEXT_PUBLIC_BACKEND_URL in frontend/.env. Frontend rebuilt and restarted successfully."
+  
+  - task: "Course Details Page - Enrollment Button Fix"
+    implemented: true
+    working: "pending_test"
+    file: "/app/frontend/app/courses/[id]/page.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "pending_test"
+        agent: "main"
+        comment: "Fixed backend URL usage in handleEnroll function. Removed duplicate backendUrl definition and now uses the correct one from line 64 with /api prefix. Course listing page loads correctly showing all courses."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+  tech_stack: "Next.js 14 + FastAPI + Supabase (PostgreSQL)"
+  environment: "Development"
+
+test_plan:
+  current_focus:
+    - "Course Enrollment Endpoint"
+    - "Course Details Page - Enrollment Button"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: |
+      COURSE ENROLLMENT ISSUE - CONFIGURATION FIXED:
+      
+      🔍 ROOT CAUSE:
+      - Missing Supabase credentials in backend and frontend .env files
+      - Backend URL configuration issue in course details page
+      - Frontend needed rebuild to pick up new environment variables
+      
+      ✅ FIXES APPLIED:
+      1. Backend Configuration:
+         - Added SUPABASE_URL: https://wbuvopdgcksviirckaur.supabase.co
+         - Added SUPABASE_SERVICE_KEY (provided by user)
+         - Added EMERGENT_LLM_KEY: sk-emergent-74a9a8b01540f9d11E
+         - Installed all backend dependencies from requirements.txt
+      
+      2. Frontend Configuration:
+         - Added NEXT_PUBLIC_SUPABASE_URL
+         - Added NEXT_PUBLIC_SUPABASE_ANON_KEY (provided by user)
+         - Added NEXT_PUBLIC_BACKEND_URL: https://enroll-repair.preview.emergentagent.com
+         - Rebuilt frontend with yarn build
+      
+      3. Code Fixes:
+         - Fixed backend URL usage in /app/frontend/app/courses/[id]/page.tsx
+         - Removed duplicate backendUrl definition in handleEnroll function (line 173)
+         - Now correctly uses backendUrl from line 64 with /api prefix
+      
+      4. Service Management:
+         - Restarted backend service (running on port 8001)
+         - Restarted frontend service (running on port 3000)
+      
+      ✅ CURRENT STATUS:
+      - Backend: RUNNING (health check passes, supabase_connected: true)
+      - Frontend: RUNNING (courses page loads correctly)
+      - Course Listing: Working (all courses displaying)
+      - Application: Ready for enrollment testing
+      
+      🎯 NEXT STEP: 
+      Comprehensive testing of enrollment endpoint to verify the network error is resolved.
+
 user_problem_statement: "Fix course enroll button error in cloned repository from https://github.com/harsha-203/adatp-v2.git"
 
 backend:
