@@ -167,7 +167,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Course Enrollment Endpoint"
+    - "Course Enrollment Endpoint - COMPLETED"
     - "Course Details Page - Enrollment Button"
   stuck_tasks: []
   test_all: false
