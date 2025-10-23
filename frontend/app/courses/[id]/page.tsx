@@ -61,7 +61,7 @@ export default function CourseDetailsPage() {
   const [enrolling, setEnrolling] = useState(false);
   const [addingToCart, setAddingToCart] = useState(false);
 
-  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8001/api';
+  const backendUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api` || 'http://localhost:8001/api';
 
   useEffect(() => {
     loadCourseDetails();
