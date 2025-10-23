@@ -12,7 +12,7 @@ import sys
 import os
 
 # Configuration
-BACKEND_URL = "https://course-btn-repair.preview.emergentagent.com/api"
+BACKEND_URL = "https://enroll-repair.preview.emergentagent.com/api"
 TEST_COURSE_ID = "227e079b-fd7b-439b-8d96-051ee91ed5d4"  # Spanish for Beginners
 
 class Colors:
