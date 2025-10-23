@@ -1,0 +1,99 @@
+{
+  "app/courses/[id]/learn/page.tsx -> react-player": {
+    "id": 5610,
+    "files": [
+      "static/chunks/5610.e69592c642cd51c8.js"
+    ]
+  },
+  "node_modules/@supabase/auth-js/dist/module/lib/helpers.js -> @supabase/node-fetch": {
+    "id": 485,
+    "files": []
+  },
+  "node_modules/@supabase/functions-js/dist/module/helper.js -> @supabase/node-fetch": {
+    "id": 485,
+    "files": []
+  },
+  "node_modules/@supabase/realtime-js/dist/module/RealtimeClient.js -> @supabase/node-fetch": {
+    "id": 485,
+    "files": []
+  },
+  "node_modules/@supabase/storage-js/dist/module/lib/helpers.js -> @supabase/node-fetch": {
+    "id": 485,
+    "files": []
+  },
+  "node_modules/@supabase/storage-js/dist/module/lib/vectors/helpers.js -> @supabase/node-fetch": {
+    "id": 485,
+    "files": []
+  },
+  "node_modules/dash-video-element/dist/dash-video-element.js -> dashjs": {
+    "id": 774,
+    "files": [
+      "static/chunks/f5cf3357.9b821824d515e757.js"
+    ]
+  },
+  "node_modules/react-player/dist/ReactPlayer.js -> ./Preview.js": {
+    "id": 4093,
+    "files": [
+      "static/chunks/reactPlayerPreview.a0b26b958726645f.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> @mux/mux-player-react": {
+    "id": 7107,
+    "files": [
+      "static/chunks/a4634e51.a4400261bebccd65.js",
+      "static/chunks/5631.45cc58a9e4a7cd15.js",
+      "static/chunks/reactPlayerMux.fcd987e7a83f3c20.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> dash-video-element/react": {
+    "id": 7007,
+    "files": [
+      "static/chunks/5631.45cc58a9e4a7cd15.js",
+      "static/chunks/reactPlayerDash.d52514ad3b2117d7.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> hls-video-element/react": {
+    "id": 7426,
+    "files": [
+      "static/chunks/a4634e51.a4400261bebccd65.js",
+      "static/chunks/5631.45cc58a9e4a7cd15.js",
+      "static/chunks/reactPlayerHls.e3594cc4ba3e6cb3.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> spotify-audio-element/react": {
+    "id": 1327,
+    "files": [
+      "static/chunks/reactPlayerSpotify.793e488e67596fac.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> tiktok-video-element/react": {
+    "id": 4940,
+    "files": [
+      "static/chunks/reactPlayerTiktok.1d106fc5112d541a.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> twitch-video-element/react": {
+    "id": 3014,
+    "files": [
+      "static/chunks/reactPlayerTwitch.b0bf430d02a4a665.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> vimeo-video-element/react": {
+    "id": 9090,
+    "files": [
+      "static/chunks/reactPlayerVimeo.5cda19878ee4b1b6.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> wistia-video-element/react": {
+    "id": 3100,
+    "files": [
+      "static/chunks/reactPlayerWistia.ceaa92a3ed0f4492.js"
+    ]
+  },
+  "node_modules/react-player/dist/players.js -> youtube-video-element/react": {
+    "id": 5452,
+    "files": [
+      "static/chunks/reactPlayerYouTube.eacfcb9dc657677e.js"
+    ]
+  }
+}
