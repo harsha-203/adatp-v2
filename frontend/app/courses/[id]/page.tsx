@@ -170,8 +170,7 @@ export default function CourseDetailsPage() {
 
     setEnrolling(true);
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8001';
-      const response = await axios.post(`${backendUrl}/api/courses/${courseId}/enroll?user_id=${user.id}`);
+      const response = await axios.post(`${backendUrl}/courses/${courseId}/enroll?user_id=${user.id}`);
 
       if (response.data.message === 'Already enrolled') {
         setIsEnrolled(true);
